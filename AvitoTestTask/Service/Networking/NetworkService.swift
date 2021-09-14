@@ -20,7 +20,7 @@ class DefaultNetworkService: NetworkService {
     // MARK:- Functions
     func getCompany(completion: @escaping (Result<Company, Error>) -> ()) {
         guard let url = URL(string: baseUrl) else { return }
-        defaultSession.dataTask(with: url) { data, response, error in
+        dataTask = defaultSession.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
@@ -29,9 +29,16 @@ class DefaultNetworkService: NetworkService {
             if let response = response as? HTTPURLResponse,
                response.statusCode == 200,
                let data = data {
-                guard let company = try? JSONDecoder().decode(Company.self, from: data) else { return }
-                completion(.success(company))
+                do {
+                    let dataResponse = try JSONDecoder().decode(Response.self, from: data)
+                    completion(.success(dataResponse.company))
+                } catch {
+                    print(String(data: data, encoding: .utf8))
+                    print(error)
+                }
             }
         }
+        
+        dataTask?.resume()  
     }
 }
