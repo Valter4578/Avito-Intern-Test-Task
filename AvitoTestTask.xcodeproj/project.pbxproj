@@ -17,6 +17,7 @@
 		8816BA3026F0D221001B7F4F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816BA2F26F0D221001B7F4F /* Employee.swift */; };
 		8816BA3626F0DABC001B7F4F /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816BA3526F0DABC001B7F4F /* CompanyViewModel.swift */; };
 		8816BA3826F0E9C1001B7F4F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816BA3726F0E9C1001B7F4F /* Response.swift */; };
+		8816BA3B26F0EAFA001B7F4F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816BA3A26F0EAFA001B7F4F /* EmployeeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8816BA2F26F0D221001B7F4F /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		8816BA3526F0DABC001B7F4F /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
 		8816BA3726F0E9C1001B7F4F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8816BA3A26F0EAFA001B7F4F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8816BA1726F0CFC4001B7F4F /* CompanyViewController.swift */,
+				8816BA3A26F0EAFA001B7F4F /* EmployeeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				8816BA3026F0D221001B7F4F /* Employee.swift in Sources */,
 				8816BA1426F0CFC4001B7F4F /* AppDelegate.swift in Sources */,
 				8816BA2A26F0D07E001B7F4F /* NetworkService.swift in Sources */,
+				8816BA3B26F0EAFA001B7F4F /* EmployeeTableViewCell.swift in Sources */,
 				8816BA2E26F0D202001B7F4F /* Company.swift in Sources */,
 				8816BA1626F0CFC4001B7F4F /* SceneDelegate.swift in Sources */,
 				8816BA3626F0DABC001B7F4F /* CompanyViewModel.swift in Sources */,

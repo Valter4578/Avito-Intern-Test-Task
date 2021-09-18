@@ -30,7 +30,7 @@ class CompanyViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(EmployeeTableViewCell.self, forCellReuseIdentifier: cellId)
         return tableView
     }()
     
@@ -79,9 +79,11 @@ extension CompanyViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = viewModel.employees[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? EmployeeTableViewCell else { return UITableViewCell() }
+        let employee = viewModel.employees[indexPath.row]
+        cell.configureNameLabel(with: employee.name)
+        cell.configureSkillsLabel(with: employee.skills.joined(separator: "\n"))
+        cell.configurePhoneNumberLabel(with: employee.phoneNumber)
         return cell
     }
-    
 }
